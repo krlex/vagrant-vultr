@@ -1,0 +1,15 @@
+---
+
+  - name: web
+    box: debian/buster64
+    box_ip: 10.1.10.10
+    memory: 512
+    ssh: 2222
+    cpu: 1
+
+  - name: database
+    box: debian/buster64
+    box_ip: 10.1.10.20
+    ssh: 2221
+    memory: 256
+    cpu: 1
