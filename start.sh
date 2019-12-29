@@ -66,12 +66,12 @@ while true; do
       fi
       ;;
     4 )
-      result=$(echo "Hostname: $HOSTNAME"; uptime)
+      result=$(echo "Hostname: $USER"; cat /etc/os-release)
       display_result "System Information"
       ;;
     5 )
-      result=$(echo "Hostname: $HOSTNAME"; uptime)
-      display_result "System Information"
+      result=$(echo "Hostname: $USER"; netstat -tulpn)
+      display_result "Open ports List"
       ;;
     6 )
       result=$(echo "Hostname: $HOSTNAME"; uptime)
