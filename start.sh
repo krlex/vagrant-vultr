@@ -4,8 +4,8 @@
 
 DIALOG_CANCEL=1
 DIALOG_ESC=255
-HEIGHT=25
-WIDTH=50
+HEIGHT=0
+WIDTH=0
 
 display_result() {
   dialog --title "$1" \
@@ -20,7 +20,7 @@ while true; do
     --title "MENU" \
     --clear \
     --cancel-label "EXIT" \
-    --menu "Please select:" $HEIGHT $WIDTH 4 \
+    --menu "Please select:" $HEIGHT $WIDTH 7 \
     "0" "Add Token" \
     "1" "Select Server" \
     "2" "Select OS" \
@@ -74,8 +74,8 @@ while true; do
       display_result "Open ports List"
       ;;
     6 )
-      result=$(echo "Hostname: $HOSTNAME"; uptime)
-      display_result "System Information"
+      result=$(echo "Hostname: $HOSTNAME"; less Vagrantfile )
+      display_result "System Information of Vagrantfile"
       ;;
   esac
 done
